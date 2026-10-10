@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen>
                       borderRadius: BorderRadius.circular(18),
                       boxShadow: [
                         BoxShadow(
-                          color: AppTheme.gold.withOpacity(0.4),
+                          color: AppTheme.gold.withValues(alpha: 0.4),
                           blurRadius: 16,
                         ),
                       ],
@@ -122,10 +122,10 @@ class _HomeScreenState extends State<HomeScreen>
                         color: Color(0xFF241A05), size: 30),
                   ),
                   const SizedBox(width: 14),
-                  Expanded(
+                  const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text('امتحان الدروس الهجائية',
                             style: TextStyle(
                                 fontSize: 24,
@@ -222,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen>
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: AppTheme.gold.withOpacity(0.45),
+                            color: AppTheme.gold.withValues(alpha: 0.45),
                             blurRadius: 22,
                             offset: const Offset(0, 8),
                           ),
@@ -256,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen>
                 height: 54,
                 child: OutlinedButton.icon(
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: AppTheme.rose.withOpacity(0.6)),
+                    side: BorderSide(color: AppTheme.rose.withValues(alpha: 0.6)),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                   ),
@@ -316,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen>
         fontWeight: FontWeight.w800,
         color: selected ? const Color(0xFF241A05) : AppTheme.ink,
       ),
-      side: BorderSide(color: AppTheme.gold.withOpacity(0.35)),
+      side: BorderSide(color: AppTheme.gold.withValues(alpha: 0.35)),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     );
   }
@@ -332,7 +332,7 @@ class _HomeScreenState extends State<HomeScreen>
         fontWeight: FontWeight.w800,
         color: selected ? const Color(0xFF062B1D) : AppTheme.ink,
       ),
-      side: BorderSide(color: AppTheme.mint.withOpacity(0.35)),
+      side: BorderSide(color: AppTheme.mint.withValues(alpha: 0.35)),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     );
   }

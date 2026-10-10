@@ -94,10 +94,10 @@ class MistakesScreen extends StatelessWidget {
                     ),
                   Expanded(
                     child: list.isEmpty
-                        ? Center(
+                        ? const Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
-                              children: const [
+                              children: [
                                 Icon(Icons.party_mode_rounded,
                                     size: 70, color: AppTheme.mint),
                                 SizedBox(height: 12),
@@ -152,10 +152,10 @@ class MistakesScreen extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.mint.withOpacity(0.1),
+                color: AppTheme.mint.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(14),
                 border:
-                    Border.all(color: AppTheme.mint.withOpacity(0.4)),
+                    Border.all(color: AppTheme.mint.withValues(alpha: 0.4)),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,7 +185,7 @@ class MistakesScreen extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: AppTheme.gold.withOpacity(0.12),
+                color: AppTheme.gold.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(

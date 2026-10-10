@@ -83,7 +83,7 @@ class _ResultScreenState extends State<ResultScreen>
                                   strokeWidth: 13,
                                   strokeCap: StrokeCap.round,
                                   backgroundColor:
-                                      Colors.white.withOpacity(0.07),
+                                      Colors.white.withValues(alpha: 0.07),
                                   valueColor: AlwaysStoppedAnimation<Color>(
                                       color),
                                 ),
@@ -144,13 +144,13 @@ class _ResultScreenState extends State<ResultScreen>
                               color: (widget.results[i]
                                       ? AppTheme.mint
                                       : AppTheme.rose)
-                                  .withOpacity(0.16),
+                                  .withValues(alpha: 0.16),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                   color: (widget.results[i]
                                           ? AppTheme.mint
                                           : AppTheme.rose)
-                                      .withOpacity(0.6)),
+                                      .withValues(alpha: 0.6)),
                             ),
                             child: Text('${i + 1}',
                                 style: TextStyle(
@@ -189,7 +189,7 @@ class _ResultScreenState extends State<ResultScreen>
                 height: 56,
                 child: OutlinedButton.icon(
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: AppTheme.rose.withOpacity(0.6)),
+                    side: BorderSide(color: AppTheme.rose.withValues(alpha: 0.6)),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18)),
                   ),

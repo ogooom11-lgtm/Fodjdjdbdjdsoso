@@ -38,10 +38,6 @@ class HijaiyaApp extends StatelessWidget {
       theme: AppTheme.theme(),
       locale: const Locale('ar'),
       supportedLocales: const [Locale('ar'), Locale('en')],
-      builder: (context, child) => Directionality(
-        direction: TextDirection.rtl,
-        child: child!,
-      ),
       home: HomeScreen(questions: questions, store: store),
     );
   }

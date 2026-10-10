@@ -134,7 +134,7 @@ class _ExamScreenState extends State<ExamScreen>
                           padding: const EdgeInsets.symmetric(
                               horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: AppTheme.mint.withOpacity(0.15),
+                            color: AppTheme.mint.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text('العلامة: $score',
@@ -152,7 +152,7 @@ class _ExamScreenState extends State<ExamScreen>
                         builder: (_, __) => LinearProgressIndicator(
                           value: (idx + (locked ? 1 : 0)) / total,
                           minHeight: 7,
-                          backgroundColor: Colors.white.withOpacity(0.08),
+                          backgroundColor: Colors.white.withValues(alpha: 0.08),
                           valueColor: const AlwaysStoppedAnimation<Color>(
                               AppTheme.gold),
                         ),
@@ -186,7 +186,7 @@ class _ExamScreenState extends State<ExamScreen>
                                     Container(
                                       padding: const EdgeInsets.all(8),
                                       decoration: BoxDecoration(
-                                        color: AppTheme.gold.withOpacity(0.16),
+                                        color: AppTheme.gold.withValues(alpha: 0.16),
                                         borderRadius:
                                             BorderRadius.circular(12),
                                       ),
@@ -266,17 +266,17 @@ class _ExamScreenState extends State<ExamScreen>
   Widget _option(int i) {
     final isCorrect = i == q.answer;
     final isPicked = i == picked;
-    Color border = Colors.white.withOpacity(0.12);
-    Color? fill = AppTheme.cardSoft.withOpacity(0.55);
+    Color border = Colors.white.withValues(alpha: 0.12);
+    Color? fill = AppTheme.cardSoft.withValues(alpha: 0.55);
     IconData? trail;
     if (locked) {
       if (isCorrect) {
         border = AppTheme.mint;
-        fill = AppTheme.mint.withOpacity(0.14);
+        fill = AppTheme.mint.withValues(alpha: 0.14);
         trail = Icons.check_circle_rounded;
       } else if (isPicked) {
         border = AppTheme.rose;
-        fill = AppTheme.rose.withOpacity(0.14);
+        fill = AppTheme.rose.withValues(alpha: 0.14);
         trail = Icons.cancel_rounded;
       }
     }
@@ -302,7 +302,7 @@ class _ExamScreenState extends State<ExamScreen>
                 Expanded(
                   child: Text(
                     q.options[i],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 15.5,
                       fontWeight: FontWeight.w600,
                       color: AppTheme.ink,
@@ -366,7 +366,7 @@ class _ExamScreenState extends State<ExamScreen>
             padding:
                 const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
-              color: AppTheme.gold.withOpacity(0.12),
+              color: AppTheme.gold.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(

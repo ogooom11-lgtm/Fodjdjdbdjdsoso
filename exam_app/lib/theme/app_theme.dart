@@ -35,7 +35,7 @@ class AppTheme {
         surface: card,
         error: rose,
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: card,
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
@@ -75,15 +75,15 @@ class GlassCard extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            (color ?? AppTheme.card).withOpacity(0.96),
-            AppTheme.cardSoft.withOpacity(0.9),
+            (color ?? AppTheme.card).withValues(alpha: 0.96),
+            AppTheme.cardSoft.withValues(alpha: 0.9),
           ],
         ),
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: AppTheme.gold.withOpacity(0.25)),
+        border: Border.all(color: AppTheme.gold.withValues(alpha: 0.25)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.35),
+            color: Colors.black.withValues(alpha: 0.35),
             blurRadius: 18,
             offset: const Offset(0, 8),
           ),
